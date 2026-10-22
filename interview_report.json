@@ -1,0 +1,86 @@
+{
+  "role": "GenAI Intern",
+  "questions_attempted": 3,
+  "total_points": 12,
+  "maximum_points": 30,
+  "overall_percentage": 40.0,
+  "results": [
+    {
+      "question_number": 1,
+      "category": "RAG",
+      "question": "What is RAG, and why would you use it instead of fine-tuning?",
+      "answer": "i dont know",
+      "evaluation": {
+        "scores": {
+          "relevance": 0,
+          "technical_correctness": 0,
+          "completeness": 0,
+          "communication": 0
+        },
+        "total_score": 0,
+        "strengths": [
+          "The candidate was honest rather than guessing incorrectly."
+        ],
+        "improvements": [
+          "Need to study Retrieval-Augmented Generation (RAG) and how it compares to fine-tuning.",
+          "Understand the differences in use cases: RAG is for dynamic/private knowledge retrieval, while fine-tuning changes model behavior, tone, or style."
+        ],
+        "feedback": "The candidate provided no answer (\"i dont know\"), meaning none of the key concepts regarding retrieval, prompt augmentation, source citation, or cost differences with fine-tuning were addressed.",
+        "improved_answer": "RAG stands for Retrieval-Augmented Generation. It works by retrieving relevant documents from an external knowledge base at query time and injecting them into the prompt so the LLM can generate an accurate response. You use RAG instead of fine-tuning when you need to provide the model with fresh, domain-specific, or private knowledge without incurring the high costs of retraining. RAG also allows you to cite sources, whereas fine-tuning primarily changes a model's behavior, tone, or style rather than reliably teaching it new facts."
+      }
+    },
+    {
+      "question_number": 2,
+      "category": "Project",
+      "question": "Tell me about an AI project you built. What was the hardest problem and how did you solve it?",
+      "answer": "i built RAG document analyzer using python, javascript, and react including Gemini AI for LLMs. It accepts the pdf and csv files and provides the initial summary of the document injected with key points. I installed a chatbot in the page which allows us to ask any questions and answer them only from the document and ha as \"Not Found\". When the user injects the document, the RAG agent create chunks out of the document for context and uses vector data to find similarity and assign ranking based on the context of the question asked to the chatbot. Then the relevant chunk data is retrieved by the the LLM and send to the chatbox thereby making sure that the LLM does not get the direct access to the document keeping in mind the security risk associated to it. With regard to the CSV insights, I made sure the chatbot gets the insights only from the Pandas calculation I have given as the LLM can may make mistakes in calculation and also rgarding the security risk associated to it.",
+      "evaluation": {
+        "scores": {
+          "relevance": 2,
+          "technical_correctness": 2,
+          "completeness": 2,
+          "communication": 1
+        },
+        "total_score": 7,
+        "strengths": [
+          "Clearly described the RAG architecture, tech stack (Python, JavaScript, React, Gemini), and core functionality.",
+          "Demonstrated good engineering awareness regarding LLM limitations and security (e.g., preventing hallucinations in CSV math by using Pandas, restricting LLM direct document access)."
+        ],
+        "improvements": [
+          "Missed explicitly detailing a specific, hard debugging problem, its root cause, and how it was resolved.",
+          "Did not mention how the system was tested or evaluated.",
+          "Failed to mention future improvements or what would be done next.",
+          "Communication is slightly run-on and informal."
+        ],
+        "feedback": "The candidate shows a solid practical understanding of building a RAG application and security considerations like using Pandas for tabular data instead of relying on the LLM. However, the answer is incomplete against the evaluation rubric because it lacks details on testing, a specific technical roadblock/solution, and future improvements.",
+        "improved_answer": "I built a RAG-based document analyzer using Python, React, and Gemini AI that lets users upload PDFs and CSVs to get automated summaries and chat with their data. For the architecture, I chunked the documents, stored them in a vector database, and used similarity search to retrieve relevant context before querying the LLM, ensuring data security by preventing direct raw document access. For CSVs, I routed queries through Pandas calculations rather than letting the LLM compute math to avoid hallucinations. The hardest problem I faced was handling chunk overlap issues where context was getting split, causing the LLM to miss crucial multi-sentence definitions. I solved this by implementing a sliding window chunking strategy with a 20% overlap, which fixed the context loss. I tested the system by creating a golden dataset of 50 QA pairs from our docs and measuring retrieval precision and answer accuracy. Next, I want to improve latency by implementing a caching layer for frequent queries and exploring hybrid search combining keyword and vector retrieval."
+      }
+    },
+    {
+      "question_number": 3,
+      "category": "LLM Basics",
+      "question": "What is an LLM, and what are tokens and a context window?",
+      "answer": "LLM stands for Large Language Model. Tokens are associated with the usage of the LLM based on how the user uses the LLM. It would require a context wdow to give accuarate response to the prompt with the help of chunks and vector data to maintain chunk similarities for scoring.",
+      "evaluation": {
+        "scores": {
+          "relevance": 2,
+          "technical_correctness": 1,
+          "completeness": 1,
+          "communication": 1
+        },
+        "total_score": 5,
+        "strengths": [
+          "Correctly identified what LLM stands for.",
+          "Attempted to explain tokens and the context window."
+        ],
+        "improvements": [
+          "Misdefined tokens as being merely 'associated with usage' rather than pieces of text/sub-words that the model processes.",
+          "Conflated the model's native context window with external RAG (Retrieval-Augmented Generation) concepts like chunks and vector similarity scoring.",
+          "Failed to mention that an LLM is a neural network trained to predict the next token."
+        ],
+        "feedback": "The candidate correctly identified the acronym for LLM, but their technical definitions for tokens and the context window were inaccurate. They confused the model's context window with RAG pipeline components (chunks and vector databases). For an internship role, it is important to clearly distinguish between a model's foundational architecture (predicting next tokens) and external application architecture (vector search).",
+        "improved_answer": "An LLM is a large neural network trained on vast amounts of text data to predict the next token in a sequence. A token is a fundamental unit of text—often a word or part of a word—that the model reads and generates. The context window refers to the maximum number of tokens (both input and output) that the model can process in a single API call; any information outside of this window is invisible to the model."
+      }
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+[
+  {
+    "id": "genai-001",
+    "source": "bank",
+    "role": "GenAI Intern",
+    "category": "LLM Basics",
+    "question": "What is an LLM, and what are tokens and a context window?",
+    "key_points": [
+      "A neural network trained on large text data to predict the next token",
+      "A token is a piece of text, often part of a word",
+      "The context window is the maximum tokens the model can handle in one call",
+      "Anything outside the window is not seen by the model"
+    ]
+  },
+  {
+    "id": "genai-002",
+    "source": "bank",
+    "role": "GenAI Intern",
+    "category": "LLM Basics",
+    "question": "What is hallucination, and how can you reduce it?",
+    "key_points": [
+      "The model produces fluent but false or unsupported content",
+      "It predicts likely text instead of checking facts",
+      "Reduce it with grounding and retrieval",
+      "Use citations and a 'say not found' instruction",
+      "Evaluate answers against a source"
+    ]
+  },
+  {
+    "id": "genai-003",
+    "source": "bank",
+    "role": "GenAI Intern",
+    "category": "RAG",
+    "question": "What is RAG, and why would you use it instead of fine-tuning?",
+    "key_points": [
+      "Retrieves relevant text at question time and adds it to the prompt",
+      "Gives the model fresh or private knowledge",
+      "Can cite sources",
+      "Fine-tuning changes behaviour or style, not facts, and is costlier"
+    ]
+  },
+  {
+    "id": "genai-004",
+    "source": "bank",
+    "role": "GenAI Intern",
+    "category": "RAG",
+    "question": "What are embeddings, and how does similarity search work?",
+    "key_points": [
+      "Embeddings are number vectors that capture the meaning of text",
+      "Similar meanings sit close together",
+      "Cosine similarity or dot product measures closeness",
+      "The top matching chunks are retrieved for the question"
+    ]
+  },
+  {
+    "id": "genai-005",
+    "source": "bank",
+    "role": "GenAI Intern",
+    "category": "RAG",
+    "question": "How would you split a long document into chunks, and why does chunking matter?",
+    "key_points": [
+      "Chunk size affects retrieval quality",
+      "Fixed-size splits can cut sentences in half",
+      "Splitting on headings or paragraphs keeps meaning together",
+      "Overlap or neighbouring chunks preserve context",
+      "Keep tables whole"
+    ]
+  },
+  {
+    "id": "genai-006",
+    "source": "bank",
+    "role": "GenAI Intern",
+    "category": "Prompting",
+    "question": "What is prompt engineering? Describe the techniques you have used.",
+    "key_points": [
+      "Writing clear instructions and context for the model",
+      "Zero-shot and few-shot examples",
+      "Constraints such as 'answer only from the context'",
+      "Specifying the output format",
+      "Testing and revising the prompt"
+    ]
+  },
+  {
+    "id": "genai-007",
+    "source": "bank",
+    "role": "GenAI Intern",
+    "category": "Prompting",
+    "question": "How do you get reliable structured output, such as JSON, from an LLM?",
+    "key_points": [
+      "Describe the exact format and give an example in the prompt",
+      "Ask for JSON only",
+      "Parse it in code and handle failures with a retry",
+      "Validate required fields and value ranges"
+    ]
+  },
+  {
+    "id": "genai-008",
+    "source": "bank",
+    "role": "GenAI Intern",
+    "category": "AI Tools",
+    "question": "How do you use AI tools when you build projects, and how do you make sure the code is correct?",
+    "key_points": [
+      "Use AI to plan, generate, explain and debug code",
+      "Read and understand every line before using it",
+      "Run and test in small steps",
+      "Check official docs because AI can be outdated",
+      "Give a real example of an AI mistake you caught"
+    ]
+  },
+  {
+    "id": "genai-009",
+    "source": "bank",
+    "role": "GenAI Intern",
+    "category": "Project",
+    "question": "Tell me about an AI project you built. What was the hardest problem and how did you solve it?",
+    "key_points": [
+      "Clear description of what the project does and the stack",
+      "Why design choices were made",
+      "A specific problem, its cause and the fix",
+      "How it was tested",
+      "What would be improved next"
+    ]
+  },
+  {
+    "id": "genai-010",
+    "source": "bank",
+    "role": "GenAI Intern",
+    "category": "HR",
+    "question": "Why do you want to work in GenAI, and why should we hire you for this internship?",
+    "key_points": [
+      "A genuine reason for interest in GenAI",
+      "Evidence from projects, not only claims",
+      "Willingness to learn and take feedback",
+      "Honest about strengths and gaps",
+      "Clear link to what the role needs"
+    ]
+  }
+]

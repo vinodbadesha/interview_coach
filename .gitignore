@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# Secrets and personal data
+*.pdf
+data/
+interview_history.json
+
+# React
+frontend/node_modules/
+frontend/build/
+frontend/.env
+frontend/.env.*
+
+# OS and editor
+.DS_Store
+.vscode/
